@@ -262,7 +262,7 @@ class Coach:
 			path = os.path.join(self.log_dir, title, f'{str(self.global_step).zfill(5)}_{str(index).zfill(5)}.jpg')
 		os.makedirs(os.path.dirname(path), exist_ok=True)
 		torchvision.utils.save_image(torch.cat([x.detach().cpu(), x_hat.detach().cpu()]), path,
-									 normalize=True, scale_each=True, range=(-1, 1), nrow=self.opts.batch_size)
+									 normalize=True, scale_each=True, nrow=self.opts.batch_size)#, range=(-1, 1)
 
 	def __get_save_dict(self):
 		save_dict = {
