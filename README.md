@@ -2,15 +2,15 @@
 
 [Run this model on Replicate](https://replicate.ai/orpatashnik/styleclip)
 
-Optimization: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](http://colab.research.google.com/github/orpatashnik/StyleCLIP/blob/main/notebooks/optimization_playground.ipynb)
-Mapper: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/orpatashnik/StyleCLIP/blob/main/notebooks/mapper_playground.ipynb)
+Optimization: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](http://colab.research.google.com/github/bramyeon/StyleCLIP/blob/main/notebooks/optimization_playground.ipynb)
+Mapper: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bramyeon/StyleCLIP/blob/main/notebooks/mapper_playground.ipynb)
 
-Global directions Torch: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/orpatashnik/StyleCLIP/blob/main/notebooks/StyleCLIP_global_torch.ipynb)
-Global directions TF1: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/orpatashnik/StyleCLIP/blob/main/notebooks/StyleCLIP_global.ipynb)
+Global directions Torch: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bramyeon/StyleCLIP/blob/main/notebooks/StyleCLIP_global_torch.ipynb)
+Global directions TF1: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bramyeon/StyleCLIP/blob/main/notebooks/StyleCLIP_global.ipynb)
 
 
 <p align="center">
-  <a href="https://www.youtube.com/watch?v=5icI0NgALnQ"><img src='https://github.com/orpatashnik/StyleCLIP/blob/main/img/StyleCLIP_gif.gif' width=600 ></a>
+  <a href="https://www.youtube.com/watch?v=5icI0NgALnQ"><img src='https://github.com/bramyeon/StyleCLIP/blob/main/img/StyleCLIP_gif.gif' width=600 ></a>
   
 Full Demo Video: <a href="https://www.youtube.com/watch?v=5icI0NgALnQ"><img src="https://img.shields.io/badge/-YouTube-red?&style=for-the-badge&logo=youtube&logoColor=white" height=20></a> &nbsp;&nbsp;&nbsp; ICCV Video <a href="https://www.youtube.com/watch?v=PhR1gpXDu0w"><img src="https://img.shields.io/badge/-YouTube-red?&style=for-the-badge&logo=youtube&logoColor=white" height=20></a>
   
@@ -99,7 +99,7 @@ In addition to the requirements mentioned before, a pretrained StyleGAN2 generat
 ### Usage
 
 Given a textual description, one can both edit a given image, or generate a random image that best fits to the description.
-Both operations can be done through the `main.py` script, or the `optimization_playground.ipynb` notebook ([![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](http://colab.research.google.com/github/orpatashnik/StyleCLIP/blob/main/notebooks/optimization_playground.ipynb)).
+Both operations can be done through the `main.py` script, or the `optimization_playground.ipynb` notebook ([![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](http://colab.research.google.com/github/bramyeon/StyleCLIP/blob/main/notebooks/optimization_playground.ipynb)).
 
 #### Editing
 To edit an image set `--mode=edit`. Editing can be done on both provided latent vector, and on a random latent vector from StyleGAN's latent space.
@@ -147,12 +147,12 @@ All configurations for the examples shown in the paper are provided there.
 
 Pretrained models for variuos edits are provided. Please refer to `utils.py` for the complete links list.
 
-We also provide a notebook for performing inference with the mapper Mapper notebook: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/orpatashnik/StyleCLIP/blob/main/notebooks/mapper_playground.ipynb)
+We also provide a notebook for performing inference with the mapper Mapper notebook: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bramyeon/StyleCLIP/blob/main/notebooks/mapper_playground.ipynb)
 
 ## Editing via Global Direction
 
 Here we provide GUI for editing images with the global directions. 
-We provide both a jupyter notebook [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/orpatashnik/StyleCLIP/blob/main/notebooks/StyleCLIP_global.ipynb),
+We provide both a jupyter notebook [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/bramyeon/StyleCLIP/blob/main/notebooks/StyleCLIP_global.ipynb),
 and the GUI used in the [video](https://www.youtube.com/watch?v=5icI0NgALnQ).
 For both, the linear direction are computed in **real time**.
 The code is located at `global_directions/`.
