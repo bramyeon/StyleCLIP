@@ -10,8 +10,8 @@ google_drive_paths = {
     "afhqdog.pkl": "",
     "afhqcat.pkl": "",
     "afhqwild.pkl": "",
-    "wikiart-1024-stylegan3-t-17.2Mimg.pkl": "https://drive.google.com/file/d/18MOpwTMJsl_Z17q-wQVnaRLCUFZYSNkj/view?usp=sharing",
-    "lhq-256-stylegan3-t-25Mimg.pkl": "https://drive.google.com/file/d/14UGDDOusZ9TMb-pOrF0PAjMGVWLSAii1/view?usp=sharing",
+    "wikiart-1024-stylegan3-t-17.2Mimg.pkl": "https://drive.google.com/uc?id=18MOpwTMJsl_Z17q-wQVnaRLCUFZYSNkj",
+    "lhq-256-stylegan3-t-25Mimg.pkl": "https://drive.google.com/uc?id=14UGDDOusZ9TMb-pOrF0PAjMGVWLSAii1",
     
     "mapper/pretrained/afro.pt": "https://drive.google.com/uc?id=1i5vAqo4z0I-Yon3FNft_YZOq7ClWayQJ",
     "mapper/pretrained/angry.pt": "https://drive.google.com/uc?id=1g82HEH0jFDrcbCtn3M22gesWKfzWV_ma",
