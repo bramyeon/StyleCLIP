@@ -3,7 +3,16 @@ import os
 
 google_drive_paths = {
     "stylegan2-ffhq-config-f.pt": "https://drive.google.com/uc?id=1EM87UquaoQmk17Q8d5kYIAHqu0dkYqdT",
-
+    
+    "stylegan2-ffhq-config-f.pkl": "https://drive.google.com/uc?id=1d4x0mQNCb45lWhgITEtGIrCFsptnKyc6",
+    "stylegan2-car-config-f.pkl": "https://drive.google.com/uc?id=1PiwJBy348PCwje1x3wj_ZhwGr2UyzkC7",
+    "stylegan2-church-config-f.pkl": "https://drive.google.com/uc?id=1JG_Bbm9UV7Gg53PUmD_1MzScfNVRGWVK",
+    "afhqdog.pkl": "https://drive.google.com/uc?id=1vTp3M5vjzgSCiq_qxaNz6P8EAZfc3u5o",
+    "afhqcat.pkl": "https://drive.google.com/uc?id=1Hfd68lT1HGbb2ZZPc4AyvmKr6jf4W8cC",
+    "afhqwild.pkl": "https://drive.google.com/uc?id=1XrDvKlM-5UqdhPQ2-C2F9HGF3C3ViAUO",
+    "wikiart-1024-stylegan3-t-17.2Mimg.pkl": "https://drive.google.com/uc?id=18MOpwTMJsl_Z17q-wQVnaRLCUFZYSNkj",
+    "lhq-256-stylegan3-t-25Mimg.pkl": "https://drive.google.com/uc?id=14UGDDOusZ9TMb-pOrF0PAjMGVWLSAii1",
+    
     "mapper/pretrained/afro.pt": "https://drive.google.com/uc?id=1i5vAqo4z0I-Yon3FNft_YZOq7ClWayQJ",
     "mapper/pretrained/angry.pt": "https://drive.google.com/uc?id=1g82HEH0jFDrcbCtn3M22gesWKfzWV_ma",
     "mapper/pretrained/beyonce.pt": "https://drive.google.com/uc?id=1KJTc-h02LXs4zqCyo7pzCp0iWeO6T9fz",

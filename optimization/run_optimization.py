@@ -7,6 +7,10 @@ import torchvision
 from torch import optim
 from tqdm import tqdm
 
+import pickle
+import dnnlib
+import torch_utils
+
 from criteria.clip_loss import CLIPLoss
 from criteria.id_loss import IDLoss
 from mapper.training.train_utils import STYLESPACE_DIMENSIONS
@@ -30,7 +34,11 @@ def main(args):
     os.makedirs(args.results_dir, exist_ok=True)
 
     g_ema = Generator(args.stylegan_size, 512, 8)
-    g_ema.load_state_dict(torch.load(args.ckpt)["g_ema"], strict=False)
+    try:
+        g_ema.load_state_dict(torch.load(args.ckpt)["g_ema"], strict=False)
+    except:
+        with open(args.ckpt, 'rb') as f:
+            g_ema = pickle.load(f)["G_ema"]#.cpu()  # torch.nn.Module
     g_ema.eval()
     g_ema = g_ema.cuda()
     mean_latent = g_ema.mean_latent(4096)
