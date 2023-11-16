@@ -38,7 +38,7 @@ def main(args):
         g_ema.load_state_dict(torch.load(args.ckpt)["g_ema"], strict=False)
     except:
         with open(args.ckpt, 'rb') as f:
-            g_ema = pickle.load(f)["G_ema"]#.cpu()  # torch.nn.Module
+            g_ema = pickle.load(f)["G_ema"].cuda() #.cpu()  # torch.nn.Module
     g_ema.eval()
     g_ema = g_ema.cuda()
     mean_latent = g_ema.mean_latent(4096)
