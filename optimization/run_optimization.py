@@ -8,8 +8,8 @@ from torch import optim
 from tqdm import tqdm
 
 import pickle
-import dnnlib
-import torch_utils
+import stylegan3.dnnlib as dnnlib
+import stylegan3.torch_utils as torch_utils
 
 from criteria.clip_loss import CLIPLoss
 from criteria.id_loss import IDLoss
