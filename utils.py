@@ -3,7 +3,16 @@ import os
 
 google_drive_paths = {
     "stylegan2-ffhq-config-f.pt": "https://drive.google.com/uc?id=1EM87UquaoQmk17Q8d5kYIAHqu0dkYqdT",
-
+    
+    "stylegan2-ffhq-config-f.pkl": "",
+    "stylegan2-car-config-f.pkl": "",
+    "stylegan2-church-config-f.pkl": "",
+    "afhqdog.pkl": "",
+    "afhqcat.pkl": "",
+    "afhqwild.pkl": "",
+    "wikiart-1024-stylegan3-t-17.2Mimg.pkl": "https://drive.google.com/file/d/18MOpwTMJsl_Z17q-wQVnaRLCUFZYSNkj/view?usp=sharing",
+    "lhq-256-stylegan3-t-25Mimg.pkl": "https://drive.google.com/file/d/14UGDDOusZ9TMb-pOrF0PAjMGVWLSAii1/view?usp=sharing",
+    
     "mapper/pretrained/afro.pt": "https://drive.google.com/uc?id=1i5vAqo4z0I-Yon3FNft_YZOq7ClWayQJ",
     "mapper/pretrained/angry.pt": "https://drive.google.com/uc?id=1g82HEH0jFDrcbCtn3M22gesWKfzWV_ma",
     "mapper/pretrained/beyonce.pt": "https://drive.google.com/uc?id=1KJTc-h02LXs4zqCyo7pzCp0iWeO6T9fz",
