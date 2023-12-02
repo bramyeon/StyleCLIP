@@ -56,3 +56,31 @@ def ensure_checkpoint_exists(model_weights_filename):
             " not found, you may need to manually download the model weights."
         )
 
+def llm_setup():
+    if not os.path.exists('./llama-2-7b-chat.ggmlv3.q4_1.bin'):
+        os.system('wget https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGML/resolve/main/llama-2-7b-chat.ggmlv3.q4_1.bin')
+    os.system('pip install langchain llama-cpp-python==0.1.78')
+    model_path = "./llama-2-7b-chat.ggmlv3.q4_1.bin"
+
+    from langchain.llms import LlamaCpp
+    llm = LlamaCpp(
+        model_path=model_path,
+        temperature=0.75,
+        max_tokens=2000,
+        top_p=1)
+    return llm
+
+def prompt_refiner(text_prompt, description):
+    prompt = f"""
+    Context: Modify the text in the following (text, class) tuple to be a relevant description relevant to the class. State your final answer only, without explanation.
+    Examples:
+        (a happy sky, face) => a happy girl
+        (a sad face, face) => a sad face
+        (a colorful boy, face) => a cheerful boy
+    Question: ({text_prompt}, {description}) =>
+    """
+    print(f"Prompt to LLM: {prompt}")
+    text_prompt = llm(prompt).split(':')[-1].strip()
+    return text_prompt
+
+llm = llm_setup()
