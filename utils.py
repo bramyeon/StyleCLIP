@@ -70,7 +70,7 @@ def llm_setup():
         top_p=1)
     return llm
 
-def prompt_refiner(text_prompt, description):
+def prompt_refiner(llm, text_prompt, description):
     prompt = f"""
     Context: Modify the text in the following (text, class) tuple to be a relevant description relevant to the class. State your final answer only, without explanation.
     Examples:
