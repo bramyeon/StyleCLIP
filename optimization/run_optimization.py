@@ -90,13 +90,18 @@ def main(args):
             i_loss = id_loss(img_gen, img_orig)[0]
         else:
             i_loss = 0
-
+            
+        if args.mse_lambda > 0:
+            mse_loss = torch.nn.functional.mse_loss(img_orig, img_gen)
+        else:
+            mse_loss = 0
+            
         if args.mode == "edit":
             if args.work_in_stylespace:
                 l2_loss = sum([((latent_code_init[c] - latent[c]) ** 2).sum() for c in range(len(latent_code_init))])
             else:
                 l2_loss = ((latent_code_init - latent) ** 2).sum()
-            loss = c_loss + args.l2_lambda * l2_loss + args.id_lambda * i_loss
+            loss = c_loss + args.l2_lambda * l2_loss + args.id_lambda * i_loss + args.mse_lambda * mse_loss
         else:
             loss = c_loss
 
@@ -145,7 +150,8 @@ if __name__ == "__main__":
     parser.add_argument("--results_dir", type=str, default="results")
     parser.add_argument('--ir_se50_weights', default='../pretrained_models/model_ir_se50.pth', type=str,
                              help="Path to facial recognition network used in ID loss")
-
+    parser.add_argument("--mse_lambda", type=float, default=0.002, help="weight of the MSE pixel squared difference mean (used for editing only)")
+    
     args = parser.parse_args()
 
     result_image = main(args)
