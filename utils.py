@@ -82,5 +82,3 @@ def prompt_refiner(llm, text_prompt, description):
     print(f"Prompt to LLM: {prompt}")
     text_prompt = llm(prompt).split(':')[-1].strip()
     return text_prompt
-
-llm = llm_setup()
