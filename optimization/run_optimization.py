@@ -150,7 +150,7 @@ if __name__ == "__main__":
     parser.add_argument("--results_dir", type=str, default="results")
     parser.add_argument('--ir_se50_weights', default='../pretrained_models/model_ir_se50.pth', type=str,
                              help="Path to facial recognition network used in ID loss")
-    parser.add_argument("--mse_lambda", type=float, default=0.002, help="weight of the MSE pixel squared difference mean (used for editing only)")
+    parser.add_argument("--mse_lambda", type=float, default=0.000, help="weight of the MSE pixel squared difference mean (used for editing only)")
     
     args = parser.parse_args()
 
