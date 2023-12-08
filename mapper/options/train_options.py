@@ -30,7 +30,7 @@ class TrainOptions:
 		self.parser.add_argument('--id_lambda', default=0.1, type=float, help='ID loss multiplier factor')
 		self.parser.add_argument('--clip_lambda', default=1.0, type=float, help='CLIP loss multiplier factor')
 		self.parser.add_argument('--latent_l2_lambda', default=0.8, type=float, help='Latent L2 loss multiplier factor')
-		self.parser.add_argument('--mse_lambda', default=0.5, type=float, help='Pixel MSE loss multiplier factor')
+		self.parser.add_argument('--mse_lambda', default=0.0, type=float, help='Pixel MSE loss multiplier factor')
         
 		self.parser.add_argument('--stylegan_weights', default='../pretrained_models/stylegan2-ffhq-config-f.pt', type=str, help='Path to StyleGAN model weights')
 		self.parser.add_argument('--stylegan_size', default=1024, type=int)

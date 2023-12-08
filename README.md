@@ -4,13 +4,10 @@ Myeongseok Kwon<sup>1</sup>, Junhak Ha<sup>2</sup>, Dongwan Hong<sup>3</sup>, Ky
 <small><sup>1</sup>20170042, <sup>2</sup>20190683, <sup>3</sup>20190696, <sup>4</sup>20200429, <sup>5</sup>20200735, <sup>*</sup>Team Leader</small>
 
 ## Main Improvements
-- **Text prompt refinement with LLM** (LLaMa2 7B Chat) is now supported to make text prompt more relevant to the dataset
+- **LLM-powered text prompt refinement** (LLaMA 2 7B Chat) is now supported to make text prompt more relevant to the dataset
 ![](img/gradio1.png)
-- **MSE loss** of the original and generated image pixels in latent optimization and latent mapper training to account for similarity of the generated image to the original image, especially when dealing with non-face images
+- **Loss generalization for similarity measure** by the MSE loss between the original and generated image pixel values in latent optimization and latent mapper training to account for similarity of the generated image to the original image, especially when dealing with non-face images and to prevent unwanted brightness attenuation
 ![](img/gradio2.png)
-- **Inference speed improvement** in latent optimization by early termination
-
-## Side Improvements
 - **Better UI** via demonstration powered by Gradio
 ![](img/gradio3.png)
    - Since the runs need GPU resource, permanent hosting in HuggingFace is not free so we do not have a permanent hosting link
@@ -22,7 +19,10 @@ Myeongseok Kwon<sup>1</sup>, Junhak Ha<sup>2</sup>, Dongwan Hong<sup>3</sup>, Ky
       4. Run all cells
       5. Copy the generated Gradio link and paste to your browser
       6. Run the demo! The Gradio link is valid for 72 hours :)
-- **Flexibility improvement** by the generation of multiple images from a text prompt by an automated hyperparameter setting
+
+## Side Improvements
+- **Inference speed improvement** in latent optimization by early termination
+- **Design flexibility improvement** by the generation of multiple images from a text prompt by an automated hyperparameter setting
 - **Application domain expansion** using more datasets and pre-trained StyleGAN models (cars, textures, doors, etc.)
 
 <br><br>

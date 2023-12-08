@@ -140,7 +140,8 @@ if __name__ == "__main__":
     parser.add_argument("--mode", type=str, default="edit", choices=["edit", "free_generation"], help="choose between edit an image an generate a free one")
     parser.add_argument("--l2_lambda", type=float, default=0.008, help="weight of the latent distance (used for editing only)")
     parser.add_argument("--id_lambda", type=float, default=0.000, help="weight of id loss (used for editing only)")
-    parser.add_argument("--latent_path", type=str, default=None, help="starts the optimization from the given latent code if provided. Otherwose, starts from"
+    parser.add_argument("--mse_lambda", type=float, default=0.000, help="weight of the MSE pixel squared difference mean (used for editing only)")
+    parser.add_argument("--latent_path", type=str, default=None, help="starts the optimization from the given latent code if provided. Otherwise, starts from"
                                                                       "the mean latent in a free generation, and from a random one in editing. "
                                                                       "Expects a .pt format")
     parser.add_argument("--truncation", type=float, default=0.7, help="used only for the initial latent vector, and only when a latent code path is"
@@ -150,7 +151,6 @@ if __name__ == "__main__":
     parser.add_argument("--results_dir", type=str, default="results")
     parser.add_argument('--ir_se50_weights', default='../pretrained_models/model_ir_se50.pth', type=str,
                              help="Path to facial recognition network used in ID loss")
-    parser.add_argument("--mse_lambda", type=float, default=0.000, help="weight of the MSE pixel squared difference mean (used for editing only)")
     
     args = parser.parse_args()
 
