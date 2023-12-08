@@ -5,11 +5,23 @@ Myeongseok Kwon<sup>1</sup>, Junhak Ha<sup>2</sup>, Dongwan Hong<sup>3</sup>, Ky
 
 ## Main Improvements
 - **LLM-powered text prompt refinement** (LLaMA 2 7B Chat) is now supported to make text prompt more relevant to the dataset
-![](img/gradio1.png)
+
+<p float="left">
+  <img src="img/fig3.png" height="170" />
+  <img src="img/fig5.png" height="170" /> 
+  <img src="img/gradio1.png" height="170" />
+</p>
+
+
 - **Loss generalization for similarity measure** by the MSE loss between the original and generated image pixel values in latent optimization and latent mapper training to account for similarity of the generated image to the original image, especially when dealing with non-face images and to prevent unwanted brightness attenuation
-![](img/gradio2.png)
-- **Better UI** via demonstration powered by Gradio
-![](img/gradio3.png)
+
+<p float="left">
+  <img src="img/fig6.png" height="250" />
+  <img src="img/gradio2.png" height="250" />
+</p>
+
+- **User interface improvement** via demonstration spaces powered by Gradio
+![](img/fig7.png)
    - Since the runs need GPU resource, permanent hosting in HuggingFace is not free so we do not have a permanent hosting link
    - The relevant Google Colab notebooks are included in this repository
    - To run the Gradio demo:
@@ -22,8 +34,15 @@ Myeongseok Kwon<sup>1</sup>, Junhak Ha<sup>2</sup>, Dongwan Hong<sup>3</sup>, Ky
 
 ## Side Improvements
 - **Inference speed improvement** in latent optimization by early termination
+![](img/fig12.png)
 - **Design flexibility improvement** by the generation of multiple images from a text prompt by an automated hyperparameter setting
-- **Application domain expansion** using more datasets and pre-trained StyleGAN models (cars, textures, doors, etc.)
+![](img/fig13.png)
+- **Application domain expansion** using more datasets and pre-trained StyleGAN models (textures and doors)
+
+<p float="left">
+  <img src="img/fig14.png" height="250" />
+  <img src="img/fig15.png" height="250" />
+</p>
 
 <br><br>
 
