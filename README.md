@@ -44,7 +44,9 @@ Myeongseok Kwon<sup>1</sup>, Junhak Ha<sup>2</sup>, Dongwan Hong<sup>3</sup>, Ky
   <img src="img/fig15.png" height="250" />
 </p>
 
-Domain download link: https://github.com/genforce/genforce/blob/master/MODEL_ZOO.md
+Domain download link: https://github.com/justinpinkney/awesome-pretrained-stylegan2
+- Textures: https://www.cunicode.com/works/deep-textures
+- Doors: https://vasilykorf.com/doors-stylegan/
 
 <br><br>
 
