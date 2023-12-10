@@ -91,7 +91,7 @@ def main(args):
         else:
             i_loss = 0
             
-        try:
+        try:    # to handle the vanilla StyleCLIP notebooks that has no MSE lambda attribute
             if args.mse_lambda > 0:
                 mse_loss = torch.nn.functional.mse_loss(img_orig, img_gen)
             else:
@@ -104,7 +104,11 @@ def main(args):
                 l2_loss = sum([((latent_code_init[c] - latent[c]) ** 2).sum() for c in range(len(latent_code_init))])
             else:
                 l2_loss = ((latent_code_init - latent) ** 2).sum()
-            loss = c_loss + args.l2_lambda * l2_loss + args.id_lambda * i_loss + args.mse_lambda * mse_loss
+            loss = c_loss + args.l2_lambda * l2_loss + args.id_lambda * i_loss
+            try:    # to handle the vanilla StyleCLIP notebooks that has no MSE lambda attribute
+                loss += args.mse_lambda * mse_loss
+            except:
+                pass
         else:
             loss = c_loss
 
