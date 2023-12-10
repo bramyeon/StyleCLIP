@@ -35,8 +35,11 @@ class Coach:
 			self.clip_loss = clip_loss.CLIPLoss(opts)
 		if self.opts.latent_l2_lambda > 0:
 			self.latent_l2_loss = nn.MSELoss().to(self.device).eval()
-		if self.opts.mse_lambda > 0:
-			self.mse_loss = nn.MSELoss().to(self.device).eval()
+		try:
+			if self.opts.mse_lambda > 0:
+				self.mse_loss = nn.MSELoss().to(self.device).eval()
+		except:
+			pass
 
 		# Initialize optimizer
 		self.optimizer = self.configure_optimizers()
@@ -243,11 +246,14 @@ class Coach:
 				loss_l2_latent = self.latent_l2_loss(w_hat, w)
 			loss_dict['loss_l2_latent'] = float(loss_l2_latent)
 			loss += loss_l2_latent * self.opts.latent_l2_lambda
-		if self.opts.mse_lambda > 0:
-			loss_mse = self.mse_loss(x_hat, x)
-			loss_dict['loss_mse'] = float(loss_mse)
-			loss += loss_mse * self.opts.mse_lambda
-            
+		try:
+			if self.opts.mse_lambda > 0:
+				loss_mse = self.mse_loss(x_hat, x)
+				loss_dict['loss_mse'] = float(loss_mse)
+				loss += loss_mse * self.opts.mse_lambda
+		except:
+			pass
+		
 		loss_dict['loss'] = float(loss)
 		return loss, loss_dict
 
