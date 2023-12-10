@@ -38,15 +38,15 @@ Myeongseok Kwon<sup>1</sup>, Junhak Ha<sup>2</sup>, Dongwan Hong<sup>3</sup>, Ky
 - **Design flexibility improvement** by the generation of multiple images from a text prompt by an automated hyperparameter setting
 ![](img/fig13.png)
 - **Application domain expansion** using more datasets and pre-trained StyleGAN models (textures and doors)
+   - Domain download link: [https://github.com/justinpinkney/awesome-pretrained-stylegan2](https://github.com/justinpinkney/awesome-pretrained-stylegan2)
+     - Textures: [https://www.cunicode.com/works/deep-textures](https://www.cunicode.com/works/deep-textures)
+     - Doors: [https://vasilykorf.com/doors-stylegan/](https://vasilykorf.com/doors-stylegan/)
 
 <p float="left">
   <img src="img/fig14.png" height="250" />
   <img src="img/fig15.png" height="250" />
 </p>
 
-Domain download link: https://github.com/justinpinkney/awesome-pretrained-stylegan2
-- Textures: https://www.cunicode.com/works/deep-textures
-- Doors: https://vasilykorf.com/doors-stylegan/
 
 <br><br>
 
