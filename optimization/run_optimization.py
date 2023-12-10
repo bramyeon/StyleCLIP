@@ -91,11 +91,14 @@ def main(args):
         else:
             i_loss = 0
             
-        if args.mse_lambda > 0:
-            mse_loss = torch.nn.functional.mse_loss(img_orig, img_gen)
-        else:
+        try:
+            if args.mse_lambda > 0:
+                mse_loss = torch.nn.functional.mse_loss(img_orig, img_gen)
+            else:
+                mse_loss = 0
+        except:
             mse_loss = 0
-            
+                        
         if args.mode == "edit":
             if args.work_in_stylespace:
                 l2_loss = sum([((latent_code_init[c] - latent[c]) ** 2).sum() for c in range(len(latent_code_init))])
